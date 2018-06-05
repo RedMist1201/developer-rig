@@ -134,35 +134,39 @@ export class ProductTable extends Component {
           </div>
         }
         {liveProducts.length > 0 &&
-          <div className="product-table__category">
-            Live
-          </div>
+          <div>
+            <div className="product-table__category">
+              Live
+            </div>
+            <div className="product-table__header">
+              <div className="text-col">Product Name</div>
+              <div className="text-col">SKU</div>
+              <div className="text-col">Amount (in Bits)</div>
+              <div className="select-col">In Development</div>
+              <div className="select-col">Broadcast</div>
+              <div className="button-col"></div>
+              <div className="dirty-col"></div>
+            </div>
+            {liveProducts}
+          </div>        
         }
-        <div className="product-table__header">
-          <div className="text-col">Product Name</div>
-          <div className="text-col">SKU</div>
-          <div className="text-col">Amount (in Bits)</div>
-          <div className="select-col">In Development</div>
-          <div className="select-col">Broadcast</div>
-          <div className="button-col"></div>
-          <div className="dirty-col"></div>
-        </div>
-        {liveProducts}
         {deprecatedProducts.length > 0 &&
-          <div className="product-table__category">
-            Deprecated
+          <div>
+            <div className="product-table__category">
+              Deprecated
+            </div>
+            <div className="product-table__header">
+              <div className="text-col">Product Name</div>
+              <div className="text-col">SKU</div>
+              <div className="text-col">Amount (in Bits)</div>
+              <div className="select-col">In Development</div>
+              <div className="select-col">Broadcast</div>
+              <div className="button-col"></div>
+              <div className="dirty-col"></div>
+            </div>
+            {deprecatedProducts}
           </div>
         }
-        <div className="product-table__header">
-          <div className="text-col">Product Name</div>
-          <div className="text-col">SKU</div>
-          <div className="text-col">Amount (in Bits)</div>
-          <div className="select-col">In Development</div>
-          <div className="select-col">Broadcast</div>
-          <div className="button-col"></div>
-          <div className="dirty-col"></div>
-        </div>
-        {deprecatedProducts}
         <div className="product-table__buttons">
           <button className="product-table__add-button" onClick={this.handleAddProductClick.bind(this)}>
             Add Product
