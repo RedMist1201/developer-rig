@@ -80,6 +80,12 @@ export const ProductRow = (props) => {
           </p>
         }
       </div>
+      <div className="button-col">
+        <button className="product-row__deprecate-button"
+            onClick={props.handleDeprecateClick}>
+          {props.product.deprecated ? 'Restore' : 'Deprecate'}
+        </button>
+      </div>
       <div className="dirty-col">
         {props.product.dirty &&
           <div className="dirty-indicator">
